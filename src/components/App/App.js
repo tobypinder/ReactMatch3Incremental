@@ -1,19 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 
 import Inventory from      '../Inventory/Inventory.js'
 import MinigameMatch3 from '../MinigameMatch3/MinigameMatch3.js'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#D5FCFF'
-  },
-  inventory: {
-    flex: 1,
-    flexDirection: 'column'
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+    backgroundColor: '#cfc'
   }
 });
 
