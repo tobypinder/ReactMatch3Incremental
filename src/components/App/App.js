@@ -1,27 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Item from  '../Item/Item.js'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
-class App extends Component {
+import Inventory from      '../Inventory/Inventory.js'
+import MinigameMatch3 from '../MinigameMatch3/MinigameMatch3.js'
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#D5FCFF'
+  },
+  inventory: {
+    flex: 1,
+    flexDirection: 'column'
+  }
+});
+
+export default class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-        <Item name="flask" size="32" />
-        <Item name="flask" size="32" />
-        <Item name="flask" size="32" />
-        <Item name="flask" size="32" />
-        <Item name="flask" size="32" />
-        <Item name="flask" size="32" />
-        <Item name="flask" size="32" />
-      </div>
+      <View style={styles.container}>
+        <MinigameMatch3 />
+        <Inventory />
+      </View>
     );
   }
 }
-
-
-
-export default App;

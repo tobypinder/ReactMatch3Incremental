@@ -1,6 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App/App';
-import './index.css';
+import React from 'react'
+import { AppRegistry } from 'react-native'
+import App from './components/App/App.js'
 
-ReactDOM.render(<App />,document.getElementById('root'));
+class Match3Incremental extends React.Component {
+  render() {
+    return (
+      <App />
+    );
+  }
+}
+
+// rendering
+const rootTag = document.getElementById('react-root');
+AppRegistry.registerComponent('Match3Incremental', () => Match3Incremental);
+AppRegistry.runApplication('Match3Incremental', { rootTag });
