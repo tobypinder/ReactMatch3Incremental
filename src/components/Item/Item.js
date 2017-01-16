@@ -5,20 +5,21 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'stretch'
-  },
-  icon: {
-    flex: 1,
-    backgroundColor: '#cff'
+    alignItems: 'flex-start',
+    backgroundColor: '#fcf'
   },
   quantity: {
     flex: 1,
-    backgroundColor: '#ffc'
+    backgroundColor: '#ffc',
+    alignSelf: 'stretch'
   },
-
+  quantityText: {
+    fontSize: 24
+  },
   description: {
     backgroundColor: '#ccf',
-    flex: 3
+    flex: 3,
+    alignSelf: 'stretch'
   },
 });
 
@@ -27,10 +28,8 @@ export default class Item extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.icon}>
-          <Image source={require("./icons/"+this.props.name+".svg")} style={{width: this.props.size, height: this.props.size}} />
-        </View>
-        <View style={styles.quantity}><Text>x 0.</Text></View>
+        <Image source={require("./icons/"+this.props.name+".svg")} style={{width: this.props.size, height: this.props.size}} />
+        <View style={styles.quantity}><Text style={styles.quantityText}>x 0</Text></View>
         <View style={styles.description}><Text>Lorem Ipsum Dolor Sit Amet</Text></View>
       </View>
     );

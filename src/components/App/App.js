@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     alignItems: 'stretch',
-    backgroundColor: '#cfc'
+    backgroundColor: '#cfc',
+    flex: 1
   }
 });
 
