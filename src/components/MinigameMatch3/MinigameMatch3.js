@@ -3,12 +3,12 @@ import { StyleSheet, View, Button } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'column',
+    flexShrink: 0,
     alignItems: 'stretch',
     justifyContent: 'flex-start',
-    backgroundColor: '#cfc',
-    minHeight: 300
+    backgroundColor: '#cfc'
   }
 
 });
