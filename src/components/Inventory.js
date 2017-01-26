@@ -33,7 +33,7 @@ export default class Inventory extends React.Component {
 
   render_list(items) {
     return items.map((item, index) =>
-      <Item size="32" key={index} state={item} />
+      <Item size={32} key={index} state={item} />
     );
   }
 
