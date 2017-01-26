@@ -53,11 +53,7 @@ const styles = StyleSheet.create({
 export default class Item extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      quantity:    Math.floor(Math.random()*1000),
-      icon:        this.props.name,
-      description: "Lorem Ipsum Dolor Sit Amet"
-    }
+    this.state = this.props.state
   }
 
   render() {

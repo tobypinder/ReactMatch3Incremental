@@ -14,34 +14,33 @@ const styles = StyleSheet.create({
 });
 
 export default class Inventory extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      items: []
+    }
+    for(var i = 0; i <= 30; i++)
+    {
+      this.state.items.push(
+        {
+          quantity:    Math.floor(Math.random()*1000),
+          icon:        'potion',
+          description: "Lorem SIpsum Dolor Sit Amet"
+        }
+      )
+    }
+  }
+
+  render_list(items) {
+    return items.map((item, index) =>
+      <Item size="32" key={index} state={item} />
+    );
+  }
 
   render() {
     return (
       <ScrollView contentContainerStyle={styles.inventory}>
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
-        <Item name="potion" size="32" />
+        {this.render_list(this.state.items)}
       </ScrollView>
     );
   }
