@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppRegistry } from 'react-native'
-import App from './components/App/App.js'
+import App from './components/App.js'
 
 class Match3Incremental extends React.Component {
   render() {

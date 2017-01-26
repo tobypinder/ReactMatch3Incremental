@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
-import Inventory from      '../Inventory/Inventory.js'
-import MinigameMatch3 from '../MinigameMatch3/MinigameMatch3.js'
+import Inventory from      './Inventory.js'
+import MinigameMatch3 from './MinigameMatch3.js'
 
 const styles = StyleSheet.create({
   container: {

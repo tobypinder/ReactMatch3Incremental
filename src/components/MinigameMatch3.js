@@ -21,7 +21,7 @@ export default class MinigameMatch3 extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button title={"Fake"} onPress={this._pushed}  />
+        <Button title={"Pushable Button"} onPress={this._pushed}  />
       </View>
     );
   }

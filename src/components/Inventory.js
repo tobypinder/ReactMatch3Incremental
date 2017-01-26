@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, ScrollView } from 'react-native'
-import Item from '../Item/Item.js'
+import Item from './Item.js'
 
 const styles = StyleSheet.create({
   inventory: {
